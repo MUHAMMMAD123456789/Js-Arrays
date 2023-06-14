@@ -79,34 +79,90 @@
 // }
 
 
+
+
+
+
+// let passenger_car = {
+//     engine: 5.4,
+//     color: "aubergine",
+//     brand: "Audi"
+// }
+
+// let truck = {
+//    engine: 3.0 ,
+//    color: "shit color",
+//    brand: "Lamborgini"
+// }
+
+
+
+// let flex_car = Object.assign({} , passenger_car, {truck})
+
+
+
+// let keys =[ Object.keys(flex_car)]
+
+
+
+// let values =[ Object.values(flex_car)]
+
+
+
+// let all = keys = keys.concat(values)
+
+
+// let types = {
+//     string: [],
+//     object: [],
+//     number: [],
+//     boolean: [],
+ 
+// }
+
+// let allcars = all.filter(i => {if (hi.typeof  === "string" ) 
+// {types.string.push(i)}
+// } 
+// ) 
+
+// console.log(all);
+ 
+
+
+
+
+
+
+
+
 let passenger_car = {
     engine: 5.4,
     color: "aubergine",
-    brand: "Audi"
+    brand: "Audi",
+    Status_new: true
 }
 
 let truck = {
    engine: 3.0 ,
    color: "shit color",
-   brand: "Lamborgini"
-
+   brand: "Lamborgini",
+   Status_new : false
 }
-
-
 
 let flex_car = Object.assign({} , passenger_car, {truck})
 
 
 
-let keys =[ Object.keys(flex_car)]
+let keys = Object.keys(flex_car)
 
 
 
-let values =[ Object.values(flex_car)]
+let values = Object.values(flex_car)
 
 
 
-let hi = keys = keys.concat(values)
+let all =  keys.concat(values)
+
 
 
 let types = {
@@ -114,16 +170,26 @@ let types = {
     object: [],
     number: [],
     boolean: [],
- 
 }
 
-let allcars = hi.filter(i => {if (hi.typeof  === "string" ) 
-{types.string.push(i)}
-} 
-) 
+for (i of all ) {
+    if (typeof i === "string") {
+        types.string++
+    } else if (typeof i === "object") {
+        types.object++
+    } else if (typeof i === "number") {
+        types.number++
+    } else if (typeof i === "boolean") {
+        types.boolean++
+    } else {}
+}
 
 console.log(types);
- 
+
+
+
+
+
 
 
 
